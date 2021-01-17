@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+	
+</head>
+<style>
+	body, .jumbo{
+	background: #1c92d2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+	h1{
+	text-align: center;
+	}
+</style>
+
+<body>
+
+	<div class='jumbotron jumbotron-fluid jumbo'>
+		<div class='container'>
+			<h1 class='display-4 head'>Genre Prediction</h1>
+		</div>
+	</div>
+	
+	<div class='container container-fluid' style='text-align:center'>
+		<form action="{{ url_for('predict')}}" method="post">
+				<h2>Predictive analysis</h2>
+				
+				<h3>Danceability</h3>
+				<br>
+				<input id="first" name="danceability" type="number ">
+				<br>
+				
+				<h3>Energy</h3>
+				<br>
+				<input id="energy" name="energy" type="number ">
+				<br>
+				
+				<h3>Key</h3>
+				<br>
+				<select name="key" id="key" required="required">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+				</select>
+				<br>
+				
+				<h3>Loudness</h3>
+				<br>
+				<input id="second" name="loudness" type="number ">
+				<br>
+				
+				<h3>Speechiness</h3>
+				<br>
+				<input id="third" name="speechiness" type="number ">
+				<br>
+				
+				<h3>Acousticness</h3>
+				<br>
+				<input id="fourth" name="acousticness" type="number ">
+				<br>
+				
+				<h3>Instrumentalness</h3>
+				<br>
+				<input id="fifth" name="instrumentalness" type="number ">
+				<br>
+				
+				<h3>Liveness</h3>
+				<br>
+				<input id="sixth" name="liveness" type="number ">
+				<br>
+				
+				
+				<h3>Valance</h3>
+				<br>
+				<input id="eighth" name="valance" type="number ">
+				<br>
+				
+				<h3>Tempo</h3>
+				<br>
+				<input id="Nineth" name="tempo" type="number ">
+				<br>
+				
+				<h3>Duration(in milliseconds)</h3>
+				<br>
+				<input id="tenth" name="duration_ms" type="number ">
+				<br>
+				
+				<h3>Mode</h3>
+				<br>
+				<select name="mode" id="mode" required="required">
+					<option value="0">0</option>
+					<option value="1">1</option>
+				</select>
+				<br>
+				
+				<h3>Time Signature</h3>
+				<br>
+				<select name="time_signature" id="time_signature" required="required">
+					<option value="1">1</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<br>
+				
+				<br><br><button id="sub" type="submit ">Find the genre</button>
+				<br>
+		</form>
+		<br><br><h3>{{ prediction_texts }}<h3>
+	</div>
+</body>
