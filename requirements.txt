@@ -67,9 +67,6 @@ PyQtWebEngine==5.12.1
 pyreadline==2.1
 python-dateutil==2.8.1
 python-editor==1.0.4
-pywin32==300
-pywin32-ctypes==0.2.0
-pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==21.0.1
 QDarkStyle==2.8.1
